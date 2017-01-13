@@ -5,6 +5,7 @@ import android.os.AsyncTask;
 import android.util.Pair;
 
 import com.example.Joker;
+import com.example.android.jokedisplay.Joke;
 import com.example.robert.myapplication.backend.myApi.MyApi;
 import com.google.api.client.extensions.android.http.AndroidHttp;
 import com.google.api.client.extensions.android.json.AndroidJsonFactory;
@@ -54,6 +55,6 @@ public class EndpointsAsyncTask extends AsyncTask<Pair<Context, String>, Void, S
     @Override
     protected void onPostExecute(String result) {
         Joker.callback(result);
-
+        Joke.showJoke();
     }
 }

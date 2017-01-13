@@ -8,14 +8,16 @@ import com.example.Joker;
 
 public class Joke extends AppCompatActivity {
 
+    static TextView joke;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_joke);
+        joke = (TextView) findViewById(R.id.joke);
     }
 
-    void showJoke() {
-        TextView joke = (TextView) findViewById(R.id.joke);
+    static public void showJoke() {
         if (Joker.getJoke() != null) {
             joke.setText(Joker.getJoke());
         }

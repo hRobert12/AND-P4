@@ -3,7 +3,7 @@ package com.example;
 public class Joker {
 
     static private String joke;
-    static private boolean done;
+    static public boolean done;
 
     static public String getJoke() {
         if (done) {
